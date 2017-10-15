@@ -4,7 +4,10 @@
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
-  //Code Here
+  function first(arr){
+    return arr[0];
+  }
+
 
 
 //Next problem
@@ -15,7 +18,9 @@ var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
 
 
-  //Code Here
+  function last(arr){
+return arr[arr.length -1];
+  }
 
 
 //Next Problem
@@ -24,7 +29,14 @@ var arr = [40,50,60];
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
-  //Code Here
+ function looper(family){
+  for (i=0; i<family.length; i++){
+    alert(family[i]);
+  }
+ }
+   //val is same as [i].
+   
+ 
 
 
 //Next problem
@@ -34,16 +46,37 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
-  //Code Here
+function reversedLooper(letters){
+  for (i=letters.length-1; i>= 0; i--){
+    alert(letters[i]);
+  }
+}
+    
+  
+  
+    
+  
 
 
 //Next Problem
 
 
 var nums = [1,2,3,6,22,98,45,23,22,12];
-//Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
+//* Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
-  //Code Here
+function evenFinder(nums){
+  var evens=[];
+  for (i=0;i<nums.length; i++)
+  if (nums[i] % 2 === 0){
+    evens.push(nums[i]);
+  }
+  return evens;
+}
+
+
+//num.shift()
+//push
+//pop()
 
 
 
@@ -66,13 +99,28 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Next problem
 
 
+
 var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 //Write a function called divider that is given one argument, numbersArray.
 //Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 
+//Code Here.use filter to loop through an arr.use push to add numer and sort it out.
+let evens=[];
+let odds=[];
+
+const divider =  numbersArray => {
+  numbersArray.filter(function(val){
+    val % 2 === 0? evens.push(val) :odds.push(val);
+  })
+  return (evens,odds);
+}
 
 
-  //Code Here
+
+
+
+
+
 
 
 //Next Problem
@@ -87,7 +135,11 @@ var getRandomArbitrary = function() {
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
-
+const finder = num=> {
+  num.filter(function(num){  //loop through an array
+    Math:Math.floor(Math.random()* 30)   //or (Math.random()* 30) + 0
+  })
+}
 
 
 
